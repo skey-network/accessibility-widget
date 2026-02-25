@@ -9,8 +9,7 @@ npm install --save @skeynetwork/accessibility-widget
 Example usage:
 
 ```tsx
-import "@skeynetwork/accessibility-widget/dist/lib/accessibility.css";
-
+import "@skeynetwork/accessibility-widget/css";
 import { Widget } from "@skeynetwork/accessibility-widget";
 
 const App = () => {
