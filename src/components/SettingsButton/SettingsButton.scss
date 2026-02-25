@@ -1,0 +1,73 @@
+@use "@scss/variables.scss" as *;
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: calc($borradi / 2);
+  padding: 0;
+
+  border: unset;
+  font-family: unset;
+  font-weight: unset;
+  color: unset;
+  background-color: unset;
+  cursor: pointer;
+
+  svg {
+    color: $theme;
+    padding: 0.5em 0 !important;
+    width: 100%;
+    height: 3em;
+
+    background-color: $fg;
+    border: $border;
+    border-radius: $borradi;
+
+    transition:
+      background-color $anim,
+      color $anim,
+      opacity $anim;
+    &:hover {
+      background-color: $bg;
+    }
+  }
+
+  &.selected {
+    svg {
+      color: $bg;
+      background-color: $theme;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  p.name {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .bars {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    bottom: 0.5em;
+    width: 40%;
+
+    .bar {
+      width: 100%;
+      height: 3px;
+      margin: 0 0.2em;
+      opacity: 0.5;
+      background-color: $bg;
+      &.on {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@use "@scss/variables.scss" as *;
+
+.accessibility-container {
+  background-color: $bg;
+  border-radius: $borradi;
+  border-bottom-right-radius: 0;
+  border: $border;
+  pointer-events: all;
+  min-width: 220px;
+
+  button {
+    padding: 0 !important;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .back {
+      width: 3em;
+      height: 3em;
+      margin: $borradi;
+      margin-right: calc($borradi * 3);
+      color: $theme;
+      cursor: pointer;
+
+      &:focus:not(:focus-visible) {
+        outline: none;
+      }
+    }
+    & > .item {
+      width: 100%;
+      flex-direction: row-reverse;
+      justify-content: start;
+      padding: $borradi !important;
+
+      background-color: $fg;
+      border-radius: $borradi;
+      border: $border;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity $anim;
+
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      svg {
+        color: $theme;
+
+        padding: 0 !important;
+        margin-right: 0.5em;
+        width: 2em;
+        height: 2em;
+        border: unset;
+        background-color: unset;
+      }
+    }
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 2.5px));
+    gap: 5px;
+    padding: 5px;
+    .item {
+      margin: 0;
+      p {
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    margin: 1em 0;
+
+    .info-icon {
+      color: $info-color;
+      justify-self: center;
+      cursor: pointer;
+    }
+    .powered-by {
+      justify-self: center;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 500;
+
+      color: $font;
+      text-decoration: unset;
+
+      p {
+        font-weight: 500;
+      }
+
+      img {
+        height: 1em;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

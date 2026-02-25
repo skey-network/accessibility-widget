@@ -1,0 +1,26 @@
+# Build and dependencies
+node_modules/
+dist/
+build/
+out/
+.vite/
+.next/
+.svelte-kit/
+.cache/
+.firebase/
+
+# Public assets
+public/
+
+# Scripts and tooling
+scripts/
+.husky/
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.*
+
+# Git
+.git/

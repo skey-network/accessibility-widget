@@ -1,0 +1,77 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log.*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+.next/
+.svelte-kit/
+.vercel/
+
+# Vite cache
+.cache/
+
+# Environment variables
+.env
+.env.*
+*.local
+!.env.example
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System-specific
+Thumbs.db
+ehthumbs.db
+
+# TypeScript / Compilation
+*.tsbuildinfo
+
+# Test and coverage outputs
+coverage/
+test-output/
+*.spec.ts.snap
+jest-html-reporters-*
+playwright-report/
+cypress/screenshots/
+cypress/videos/
+
+# Optional: Yarn / PnP / PM caches
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.pnpm-store/
+npm-cache/
+
+# ESLint / Stylelint / Prettier cache
+.eslintcache
+.prettiercache
+.stylelintcache
+
+# Firebase
+.firebase/

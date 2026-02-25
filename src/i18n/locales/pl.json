@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "fontSize": "Rozmiar tekstu",
+    "lineHeight": "Wysokość linii",
+    "letterSpacing": "Odstępy liter",
+    "markLinks": "Oznacz linki",
+    "markTitles": "Oznacz tytuły",
+    "contrast": "Kontrast",
+    "grayscale": "Szarość",
+    "invert": "Odwróć kolory",
+    "revert": "Resetuj"
+  },
+  "aria": {
+    "back": "Zamknij",
+    "accessBtn": "Ustawienia dostępności"
+  },
+  "poweredBy": "Powered by",
+  "storageDisclosure": "Przechowujemy twoje ustawienia dostępności lokalnie w twojej przeglądarce, aby ustawienia były zapamiętane. Personalne informacje nie są zbierane ani udostępniane."
+}

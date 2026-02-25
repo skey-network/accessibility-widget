@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "fontSize": "Font size",
+    "lineHeight": "Line height",
+    "letterSpacing": "Letter spacing",
+    "markLinks": "Mark links",
+    "markTitles": "Mark titles",
+    "contrast": "Contrast",
+    "grayscale": "Grayscale",
+    "invert": "Invert",
+    "revert": "Reset changes"
+  },
+  "aria": {
+    "back": "Close",
+    "accessBtn": "Accessibility settings"
+  },
+  "poweredBy": "Powered by",
+  "storageDisclosure": "We store your accessibility preferences locally in your browser to remember your settings. No personal data is collected or shared."
+}

@@ -1,0 +1,43 @@
+# Build output
+node_modules
+dist
+build
+out
+coverage
+.vite
+.next
+.vercel
+
+# Logs
+*.log
+*.log.*
+
+# Lock files
+*.lock
+
+# Static assets
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.webp
+
+# Public static directory
+public
+
+# Env files
+.env
+.env.*
+
+# Editor config
+.vscode/
+.idea/
+
+# Stylelint / Prettier cache
+.stylelintcache
+.prettiercache
+
+# Firebase
+.firebase

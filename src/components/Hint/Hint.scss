@@ -1,0 +1,51 @@
+@use "@scss/variables.scss" as *;
+
+.access-hint {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    min-width: 10em;
+    width: min-content;
+    transform: translate(0, calc(-100% - 0.75em));
+
+    pointer-events: none;
+    padding: $borradi;
+
+    font-size: 12px;
+    font-family: Oxygen, sans-serif !important;
+
+    color: $font;
+    background-color: $bg;
+    border-radius: $borradi;
+    border: $border;
+
+    transition: opacity $anim;
+    z-index: 1000;
+
+    .access-hint-pop {
+      position: absolute;
+      bottom: 0;
+
+      transform: translate(0, calc(0.5em + 1px)) rotate(45deg);
+      width: 1em;
+      height: 1em;
+      background-color: $bg;
+      border: $border;
+      border-top: unset;
+      border-left: unset;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    // &:focus-visible .access-hint,
+    // &.access-hint-clickable:hover ~ .access-hint-content {
+    //   opacity: 1 !important;
+    //   pointer-events: unset !important;
+    // }
+  }
+}

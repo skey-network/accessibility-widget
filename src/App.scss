@@ -1,0 +1,169 @@
+/* stylelint-disable no-descending-specificity */
+@use "sass:color";
+
+$theme-color: #4a90e2;
+$bg-color: #fdfdfd;
+$text-color: #333;
+$footer-bg: #222;
+$footer-text: #fff;
+$border-radius: 8px;
+
+body {
+  margin: 0;
+  font-family: Oxygen, sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header.header {
+  background-color: $theme-color;
+  color: #fff;
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      margin: 0 1rem 0 0;
+      a {
+        text-decoration: none;
+        color: unset;
+      }
+    }
+
+    nav {
+      a {
+        margin-right: 1rem;
+        color: #fff;
+        text-decoration: none;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(135deg, $theme-color, color.adjust($theme-color, $lightness: 20%));
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #fff;
+      color: $theme-color;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+
+      &:hover {
+        background: color.adjust(#fff, $lightness: -10%);
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.section {
+  padding: 4rem 0;
+
+  &.reverse {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    .text {
+      flex: 1;
+
+      h2 {
+        margin-bottom: 1rem;
+        color: $theme-color;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+    }
+
+    .image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+
+footer.footer {
+  background-color: $footer-bg;
+  color: $footer-text;
+  text-align: center;
+  padding: 1rem 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.loader {
+  position: relative;
+  overflow: hidden;
+  background-color: #0000000e;
+
+  .moving {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: move 2s ease-out infinite;
+    background: linear-gradient(110deg, transparent 23%, #00000006 50%, transparent 77%);
+  }
+
+  @keyframes move {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
