@@ -1,11 +1,37 @@
-# Available scripts
+## Getting started
+
+Accessibility widet for react apps. See props section for widget configuration. Install with:
+
+```sh
+npm install --save @skeynetwork/accessibility-widget
+```
+
+Example usage:
+
+```tsx
+import "@skeynetwork/accessibility-widget/dist/lib/accessibility.css";
+
+import { Widget } from "@skeynetwork/accessibility-widget";
+
+const App = () => {
+  return (
+    <div className="app">
+      <Widget />
+    </div>
+  );
+};
+```
+
+## Development
+
+### Available scripts
 
 - `dev` - Start vite development environment
 - `build:lib` - Build widget ready for react sites
 - `build:embed` - Build widget ready for static sites
 - `prepare` - Run `husky` command
 
-# How to run widget in dev mode
+### How to run widget in dev mode
 
 1. Set correct node version
 
@@ -25,7 +51,7 @@ yarn
 yarn run dev
 ```
 
-## Building for react pages
+### Building for react pages
 
 1. Set react and react-dom versions to match your project's versions
 
@@ -50,6 +76,7 @@ You should see this in `dist/lib/`
 4. Import `Widget` and use it!
 
 ```tsx
+import "src/accessibility/accessibility.css";
 import { Widget } from "src/accessibility/accessibility.es";
 
 const App = () => {
@@ -61,7 +88,7 @@ const App = () => {
 };
 ```
 
-## Building for static pages
+### Building for static pages
 
 1. Run build command
 
@@ -91,7 +118,7 @@ You should see this in `dist/embed/`
 </script>
 ```
 
-## Props
+### Props
 
 1. Button props are following this scheme
 

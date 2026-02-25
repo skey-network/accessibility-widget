@@ -1,13 +1,31 @@
 {
-  "name": "accessibility-widget",
-  "private": true,
-  "version": "0.0.9",
-  "type": "module",
+  "name": "@skey-network/accessibility-widget",
+  "version": "0.0.10",
+  "keywords": [],
+  "author": "skey-network",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skey-network/accessibility-widget.git"
+  },
+  "main": "dist/lib/accessibility.cjs.js",
+  "module": "dist/lib/accessibility.es.js",
+  "types": "dist/lib/accessibility.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lib/accessibility.es.js",
+      "require": "./dist/lib/accessibility.cjs.js"
+    }
+  },
+  "files": [
+    "dist/lib"
+  ],
   "scripts": {
     "dev": "vite",
     "build:lib": "vite build --config vite/config.lib.ts",
     "build:embed": "vite build --config vite/config.embed.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepublishOnly": "npm run build:lib"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.16",
