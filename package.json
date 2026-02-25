@@ -1,6 +1,6 @@
 {
   "name": "@skeynetwork/accessibility-widget",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "keywords": [],
   "author": "skey-network",
   "license": "ISC",
@@ -35,14 +35,12 @@
     "classnames": "^2.5.1",
     "i18next": "^25.6.3",
     "i18next-browser-languagedetector": "^8.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "react-i18next": "^16.3.4",
     "wouter": "^3.9.0"
   },
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -57,6 +55,8 @@
     "eslint-plugin-unused-imports": "^4.3.0",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass-embedded": "^1.93.3",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
