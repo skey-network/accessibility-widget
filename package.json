@@ -1,6 +1,6 @@
 {
-  "name": "@skey-network/accessibility-widget",
-  "version": "0.0.10",
+  "name": "@skeynetwork/accessibility-widget",
+  "version": "0.0.11",
   "keywords": [],
   "author": "skey-network",
   "license": "ISC",
@@ -20,6 +20,9 @@
   "files": [
     "dist/lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build:lib": "vite build --config vite/config.lib.ts",
