@@ -1,6 +1,6 @@
 {
   "name": "@skeynetwork/accessibility-widget",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "keywords": [],
   "author": "skey-network",
   "license": "ISC",
@@ -15,6 +15,9 @@
     ".": {
       "import": "./dist/lib/accessibility.es.js",
       "require": "./dist/lib/accessibility.cjs.js"
+    },
+    "./css": {
+      "default": "./dist/lib/accessibility.css"
     }
   },
   "files": [
