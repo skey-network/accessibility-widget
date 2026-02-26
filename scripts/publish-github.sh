@@ -20,26 +20,16 @@ fi
 # Run build:embed script
 npm run build:embed
 
-mkdir -p release
-cp -r dist/embed/* release/
-
 # Get version from package.json
 VERSION=$(jq -r .version package.json)
 TAG="v$VERSION"
-
-git add release
-git commit -m "Release $TAG" --no-verify || true
-git push origin main
 
 # Create and push tag
 git tag "$TAG"
 git push origin "$TAG"
 
-GH_BASE_URL="https://raw.githubusercontent.com/skey-network/accessibility-widget/refs/tags"
+# Create GitHub release and attach files from dist/embed
+ASSETS=$(find dist/embed -type f | tr '\n' ' ')
+gh release create "$TAG" $ASSETS --title "$TAG" --notes "Release $TAG"
 
-echo "Released files:"
-
-# Print GitHub URLs for each file in release
-for file in $(find release -type f); do
-  echo "$GH_BASE_URL/$TAG/$file"
-done
+echo "Release $TAG created and assets uploaded."
