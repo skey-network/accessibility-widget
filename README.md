@@ -1,4 +1,4 @@
-## Getting started
+## Getting started with react app
 
 Accessibility widet for react apps. See props section for widget configuration. Install with:
 
@@ -21,6 +21,32 @@ const App = () => {
 };
 ```
 
+## Getting started with pure html/css
+
+Download newest release files from https://github.com/skey-network/accessibility-widget/releases
+
+Copy .js and .css files to site public directory.
+
+```html
+<head>
+  <!-- ... Head content -->
+
+  <link rel="stylesheet" href="accessibility-widget.css" />
+</head>
+<body>
+  <!-- ... Body content -->
+
+  <div class="accessibility"></div>
+
+  <script src="accessibility-embed.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      window.AccessibilityButton.mount(document.querySelector(".accessibility"), {});
+    });
+  </script>
+</body>
+```
+
 ## Development
 
 ### Available scripts
@@ -29,6 +55,7 @@ const App = () => {
 - `build:lib` - Build widget ready for react sites
 - `build:embed` - Build widget ready for static sites
 - `prepare` - Run `husky` command
+- `publish:github` - Create github release
 
 ### How to run widget in dev mode
 
@@ -107,6 +134,8 @@ You should see this in `dist/embed/`
 3. Initalize component
 
 ```html
+<link rel="stylesheet" href="accessibility-widget.css" />
+
 <div class="accessibility"></div>
 
 <script src="accessibility-embed.js"></script>
