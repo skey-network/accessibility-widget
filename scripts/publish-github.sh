@@ -35,7 +35,7 @@ git push origin main
 git tag "$TAG"
 git push origin "$TAG"
 
-GH_BASE_URL="https://github.com/skey-network/accessibility-widget/blob"
+GH_BASE_URL="https://raw.githubusercontent.com/skey-network/accessibility-widget/refs/tags"
 
 echo "Released files:"
 
