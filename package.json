@@ -1,6 +1,6 @@
 {
   "name": "@skeynetwork/accessibility-widget",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "keywords": [],
   "author": "skey-network",
   "license": "ISC",
@@ -31,7 +31,8 @@
     "build:lib": "vite build --config vite/config.lib.ts",
     "build:embed": "vite build --config vite/config.embed.ts",
     "prepare": "husky",
-    "prepublishOnly": "npm run build:lib"
+    "prepublishOnly": "npm run build:lib",
+    "publish:github": "./scripts/publish-github.sh"
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.16",
