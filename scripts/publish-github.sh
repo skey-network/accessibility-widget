@@ -28,7 +28,7 @@ VERSION=$(jq -r .version package.json)
 TAG="v$VERSION"
 
 git add release
-git commit -m "Release $TAG" || true
+git commit -m "Release $TAG" --no-verify || true
 git push origin main
 
 # Create and push tag
